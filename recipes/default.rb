@@ -13,12 +13,9 @@ apt_repository "commercehub-oss" do
     action :add
 end
 
-# Doesn't currently work because bintray doesn't provide signed metadata?
-#apt_package "chef-kick" do
-#    action :upgrade
-#end
-
-execute "apt-get install --quiet --yes --allow-unauthenticated chef-kick"
+apt_package "chef-kick" do
+    action :upgrade
+end
 
 file "/usr/bin/chef-kick" do
     owner "root"
