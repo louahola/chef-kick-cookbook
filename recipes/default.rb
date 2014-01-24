@@ -4,7 +4,6 @@
 #
 
 include_recipe "apt"
-include_recipe "chef-client"
 
 apt_repository "commercehub-oss" do
     uri "http://dl.bintray.com/commercehub-oss/debian"
